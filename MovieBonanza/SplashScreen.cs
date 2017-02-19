@@ -24,16 +24,9 @@ namespace MovieBonanza
         /// <param name="e"></param>
         private void SplashScreenTimer_Tick(object sender, EventArgs e)
         {
-            // Initialize next form
-            SelectionForm selectionForm = new SelectionForm();
-
-            // Create a refernace to the parentform
-            selectionForm.previousForm = this;
-            // Splash screen timer enablees set to false
-            this.SplashScreenTimer.Enabled = false;
-            selectionForm.Show();
+            this.Enabled = false;
             this.Hide();
-
+            Program.mySelectionForm.Show();
         }
     }
 }

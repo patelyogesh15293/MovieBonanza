@@ -38,6 +38,7 @@
             this.Name = "SelectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectionForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectionForm_FormClosing);
             this.ResumeLayout(false);
 
         }

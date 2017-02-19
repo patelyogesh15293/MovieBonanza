@@ -46,7 +46,7 @@
             this.SplashFormLabel.BackColor = System.Drawing.SystemColors.Highlight;
             this.SplashFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SplashFormLabel.ForeColor = System.Drawing.SystemColors.Window;
-            this.SplashFormLabel.Location = new System.Drawing.Point(21, 9);
+            this.SplashFormLabel.Location = new System.Drawing.Point(181, 9);
             this.SplashFormLabel.Name = "SplashFormLabel";
             this.SplashFormLabel.Size = new System.Drawing.Size(230, 20);
             this.SplashFormLabel.TabIndex = 0;
@@ -54,17 +54,15 @@
             // 
             // SplashForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(614, 276);
             this.Controls.Add(this.SplashFormLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SplashForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
-            this.Load += new System.EventHandler(this.SplashScreenTimer_Tick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

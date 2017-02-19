@@ -20,5 +20,23 @@ namespace MovieBonanza
         {
             InitializeComponent();
         }
+
+        private void SelectionForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure?", "confirm", 
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.OK)
+            {
+                Program.mySplashForm.Close();
+            }
+            else
+            {
+                e.Cancel = true;
+               
+            }
+            // Exit from application
+            Application.Exit();
+        }
     }
 }
