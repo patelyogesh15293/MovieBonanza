@@ -32,11 +32,9 @@ namespace MovieBonanza
             }
             else
             {
-                e.Cancel = true;
-               
+                e.Cancel = true;               
             }
-            // Exit from application
-            Application.Exit();
+            
         }
     }
 }

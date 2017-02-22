@@ -24,8 +24,11 @@ namespace MovieBonanza
         /// <param name="e"></param>
         private void SplashScreenTimer_Tick(object sender, EventArgs e)
         {
+            // Enabled timer
             this.Enabled = false;
+            // Hide the splash form
             this.Hide();
+            // Show selection form
             Program.mySelectionForm.Show();
         }
     }
