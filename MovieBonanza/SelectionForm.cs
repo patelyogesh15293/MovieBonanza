@@ -80,8 +80,27 @@ namespace MovieBonanza
         /// </summary>
         public void getImages()
         {
-
+            
         }
 
+        /// <summary>
+        /// Hendler fo next button click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            myOrderForm.Movie = new Dictionary<String, object>
+            {
+                {"Title", TitleTextBox.Text },
+                {"Category", CategoryTextBox.Text },
+                {"Cost", CostTextBox.Text },
+                {"Picture", SmallPictureBox.Image }
+
+            };
+            myOrderForm.Show();
+        }
     }
 }

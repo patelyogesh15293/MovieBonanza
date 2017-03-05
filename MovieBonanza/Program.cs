@@ -13,6 +13,9 @@ namespace MovieBonanza
         // Declare public static form
         public static SelectionForm mySelectionForm;
 
+        // Create a instance of movie class
+        //public static Movies ovieSeter = new Movies();
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
