@@ -69,15 +69,15 @@
             this.CurrentMoviesListBox.FormattingEnabled = true;
             this.CurrentMoviesListBox.Items.AddRange(new object[] {
             "Cedar Rapids",
-            "Company Men ",
+            "Company Men",
             "Death Race 2",
-            "Footloose ",
+            "Footloose",
             "Gnomeo and Juliet",
             "I am Number Four",
             "Just Go With It",
             "No Strings Attached",
             "Real Steel",
-            "Season of the Witch",
+            "Season of th Witch",
             "The Dilemma",
             "The Eagle",
             "The Green Hornet",
@@ -92,6 +92,7 @@
             this.CurrentMoviesListBox.Size = new System.Drawing.Size(130, 186);
             this.CurrentMoviesListBox.Sorted = true;
             this.CurrentMoviesListBox.TabIndex = 2;
+            this.CurrentMoviesListBox.SelectedIndexChanged += new System.EventHandler(this.CurrentMoviesListBox_SelectedIndexChanged);
             // 
             // YourSelectionGroupBox
             // 
@@ -199,7 +200,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Bonanza - Your Online Streaming Service";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectionForm_FormClosing);
             this.YourSelectionGroupBox.ResumeLayout(false);
             this.YourSelectionGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SmallPictureBox)).EndInit();

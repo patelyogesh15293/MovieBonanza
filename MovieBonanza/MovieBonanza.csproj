@@ -52,6 +52,7 @@
     <Compile Include="AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Movies.cs" />
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +118,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\splashImage.jpg" />
+    <Content Include="Resources\CedarRapids.jpg" />
+    <Content Include="Resources\DeathRace2.jpg" />
+    <Content Include="Resources\Footloose.jpg" />
+    <Content Include="Resources\GnomeoAndJuliet.jpg" />
+    <Content Include="Resources\IAmNumberFour.jpg" />
+    <Content Include="Resources\JustGoWithIt.jpg" />
+    <Content Include="Resources\NoStringsAttached.jpg" />
+    <Content Include="Resources\RealSteel.jpg" />
+    <Content Include="Resources\Sanctum.jpg" />
+    <Content Include="Resources\SeasonOfTheWitch.jpg" />
+    <Content Include="Resources\SplashScreen.gif" />
+    <Content Include="Resources\TheCompanyMen.jpg" />
+    <Content Include="Resources\TheDilemma.jpg" />
+    <Content Include="Resources\TheEagle.jpg" />
+    <Content Include="Resources\TheGreenHornet.jpg" />
+    <Content Include="Resources\TheMechanic.jpg" />
+    <Content Include="Resources\TheOtherWoman.jpg" />
+    <Content Include="Resources\TheRite.jpg" />
+    <Content Include="Resources\TheRoommate.jpg" />
+    <Content Include="Resources\TheWayBack.jpg" />
+    <Content Include="Resources\WaitingForForever.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
