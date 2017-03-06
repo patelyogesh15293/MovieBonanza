@@ -8,13 +8,6 @@ namespace MovieBonanza
 {
     class Movies
     {
-        public string Title { get; set; }
-
-        public string Genes { get; set; }
-
-        public string Price { get; set; }
-
-        public string TotalCost { get; set; }
-
+        public System.Drawing.Bitmap Poster { get; set; }
     }
 }

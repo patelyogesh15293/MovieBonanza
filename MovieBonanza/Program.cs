@@ -14,7 +14,20 @@ namespace MovieBonanza
         public static SelectionForm mySelectionForm;
 
         // Create a instance of movie class
-        //public static Movies ovieSeter = new Movies();
+        private static Movies movies = new Movies();
+
+        internal static Movies Movies
+        {
+            get
+            {
+                return movies;
+            }
+
+            set
+            {
+                movies = value;
+            }
+        }
 
         /// <summary>
         /// The main entry point for the application.

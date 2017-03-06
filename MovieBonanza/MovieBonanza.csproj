@@ -96,6 +96,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
@@ -118,27 +119,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\splashImage.jpg" />
-    <Content Include="Resources\CedarRapids.jpg" />
-    <Content Include="Resources\DeathRace2.jpg" />
-    <Content Include="Resources\Footloose.jpg" />
-    <Content Include="Resources\GnomeoAndJuliet.jpg" />
-    <Content Include="Resources\IAmNumberFour.jpg" />
-    <Content Include="Resources\JustGoWithIt.jpg" />
-    <Content Include="Resources\NoStringsAttached.jpg" />
-    <Content Include="Resources\RealSteel.jpg" />
-    <Content Include="Resources\Sanctum.jpg" />
-    <Content Include="Resources\SeasonOfTheWitch.jpg" />
-    <Content Include="Resources\SplashScreen.gif" />
-    <Content Include="Resources\TheCompanyMen.jpg" />
-    <Content Include="Resources\TheDilemma.jpg" />
-    <Content Include="Resources\TheEagle.jpg" />
-    <Content Include="Resources\TheGreenHornet.jpg" />
-    <Content Include="Resources\TheMechanic.jpg" />
-    <Content Include="Resources\TheOtherWoman.jpg" />
-    <Content Include="Resources\TheRite.jpg" />
-    <Content Include="Resources\TheRoommate.jpg" />
-    <Content Include="Resources\TheWayBack.jpg" />
-    <Content Include="Resources\WaitingForForever.jpg" />
+    <None Include="Resources\WaitingForForever.jpg" />
+    <None Include="Resources\TheWayBack.jpg" />
+    <None Include="Resources\TheRoommate.jpg" />
+    <None Include="Resources\TheRite.jpg" />
+    <None Include="Resources\TheOtherWoman.jpg" />
+    <None Include="Resources\TheMechanic.jpg" />
+    <None Include="Resources\TheGreenHornet.jpg" />
+    <None Include="Resources\TheEagle.jpg" />
+    <None Include="Resources\TheDilemma.jpg" />
+    <None Include="Resources\TheCompanyMen.jpg" />
+    <None Include="Resources\SplashScreen.gif" />
+    <None Include="Resources\SeasonOfTheWitch.jpg" />
+    <None Include="Resources\Sanctum.jpg" />
+    <None Include="Resources\RealSteel.jpg" />
+    <None Include="Resources\NoStringsAttached.jpg" />
+    <None Include="Resources\JustGoWithIt.jpg" />
+    <None Include="Resources\IAmNumberFour.jpg" />
+    <None Include="Resources\GnomeoAndJuliet.jpg" />
+    <None Include="Resources\Footloose.jpg" />
+    <None Include="Resources\DeathRace2.jpg" />
+    <None Include="Resources\CedarRapids.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

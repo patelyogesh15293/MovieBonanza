@@ -64,6 +64,9 @@ namespace MovieBonanza
             {"New Releases", "4.99"}            
         };
 
+        //Create picture directory for store pictures of movie
+        
+
         private void CurrentMoviesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ListBox listBox = (ListBox)sender;
@@ -80,7 +83,108 @@ namespace MovieBonanza
         /// </summary>
         public void getImages()
         {
-            
+            if (TitleTextBox.Text == "Cedar Rapids")
+            {
+                SmallPictureBox.Image = Properties.Resources.CedarRapids;
+                Program.Movies.Poster = Properties.Resources.CedarRapids;
+            }
+            if (TitleTextBox.Text == "Company Men")
+            {
+                SmallPictureBox.Image = Properties.Resources.TheCompanyMen;
+                Program.Movies.Poster = Properties.Resources.TheCompanyMen;
+            }
+            if (TitleTextBox.Text == "Death Race 2")
+            {
+                SmallPictureBox.Image = Properties.Resources.DeathRace2;
+                Program.Movies.Poster = Properties.Resources.DeathRace2;
+            }
+            if (TitleTextBox.Text == "Footloose")
+            {
+                SmallPictureBox.Image = Properties.Resources.Footloose;
+                Program.Movies.Poster = Properties.Resources.Footloose;
+            }
+            if (TitleTextBox.Text == "Gnomeo and Juliet")
+            {
+                SmallPictureBox.Image = Properties.Resources.GnomeoAndJuliet;
+                Program.Movies.Poster = Properties.Resources.GnomeoAndJuliet;
+            }
+            if (TitleTextBox.Text == "I am Number Four")
+            {
+                SmallPictureBox.Image = Properties.Resources.IAmNumberFour;
+                Program.Movies.Poster = Properties.Resources.IAmNumberFour;
+            }
+            if (TitleTextBox.Text == "Just Go With It")
+            {
+                SmallPictureBox.Image = Properties.Resources.JustGoWithIt;
+                Program.Movies.Poster = Properties.Resources.JustGoWithIt;
+            }
+            if (TitleTextBox.Text == "No Strings Attached")
+            {
+                SmallPictureBox.Image = Properties.Resources.NoStringsAttached;
+                Program.Movies.Poster = Properties.Resources.NoStringsAttached;
+
+            }
+            if (TitleTextBox.Text == "Real Steel")
+            {
+                SmallPictureBox.Image = Properties.Resources.RealSteel;
+                Program.Movies.Poster = Properties.Resources.RealSteel;
+            }
+            if (TitleTextBox.Text == "Sanctum")
+            {
+                SmallPictureBox.Image = Properties.Resources.Sanctum;
+                Program.Movies.Poster = Properties.Resources.Sanctum;
+            }
+            if (TitleTextBox.Text == "Season of the Witch")
+            {
+                SmallPictureBox.Image = Properties.Resources.SeasonOfTheWitch;
+                Program.Movies.Poster = Properties.Resources.SeasonOfTheWitch;
+            }
+            if (TitleTextBox.Text == "The Dilemma")
+            {
+                SmallPictureBox.Image = Properties.Resources.TheDilemma;
+                Program.Movies.Poster = Properties.Resources.TheDilemma;
+            }
+            if (TitleTextBox.Text == "The Eagle")
+            {
+                SmallPictureBox.Image = Properties.Resources.TheEagle;
+                Program.Movies.Poster = Properties.Resources.TheEagle;
+            }
+            if (TitleTextBox.Text == "The Green Hornet")
+            {
+                SmallPictureBox.Image = Properties.Resources.TheGreenHornet;
+                Program.Movies.Poster = Properties.Resources.TheGreenHornet;
+            }
+            if (TitleTextBox.Text == "The Mechanic")
+            {
+                SmallPictureBox.Image = Properties.Resources.TheMechanic;
+                Program.Movies.Poster = Properties.Resources.TheMechanic;
+            }
+            if (TitleTextBox.Text == "The Other Woman")
+            {
+                SmallPictureBox.Image = Properties.Resources.TheOtherWoman;
+                Program.Movies.Poster = Properties.Resources.TheOtherWoman;
+            }
+            if (TitleTextBox.Text == "The Rite")
+            {
+                SmallPictureBox.Image = Properties.Resources.TheRite;
+                Program.Movies.Poster = Properties.Resources.TheRite;
+            }
+            if (TitleTextBox.Text == "The Roommate")
+            {
+                SmallPictureBox.Image = Properties.Resources.TheRoommate;
+                Program.Movies.Poster = Properties.Resources.TheRoommate;
+            }
+            if (TitleTextBox.Text == "The Way Back")
+            {
+                SmallPictureBox.Image = Properties.Resources.TheWayBack;
+                Program.Movies.Poster = Properties.Resources.TheWayBack;
+            }
+            if (TitleTextBox.Text == "Waiting for Forever")
+            {
+                SmallPictureBox.Image = Properties.Resources.WaitingForForever;
+                Program.Movies.Poster = Properties.Resources.WaitingForForever;
+            }
+
         }
 
         /// <summary>
@@ -91,7 +195,6 @@ namespace MovieBonanza
         private void NextButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-
             myOrderForm.Movie = new Dictionary<String, object>
             {
                 {"Title", TitleTextBox.Text },
@@ -100,7 +203,8 @@ namespace MovieBonanza
                 {"Picture", SmallPictureBox.Image }
 
             };
-            myOrderForm.Show();
+            myOrderForm.Show();           
         }
+
     }
 }
