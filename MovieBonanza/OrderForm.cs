@@ -60,12 +60,6 @@ namespace MovieBonanza
                 GrandTotalTextBox.Text = "$" + Convert.ToString(1.13 * _holdValue);
             }
         }
-
-        /// <summary>
-        /// Handler for print tool menu button clicked
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
           
@@ -159,6 +153,12 @@ namespace MovieBonanza
               "Total Cost: " + SubTotalTextBox.Text);
         }
 
+
+        /// <summary>
+        /// Handler for print tool menu button clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StreamStripMenuItem1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You selected movie stream sending to printer.!!");
