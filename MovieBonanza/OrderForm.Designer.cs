@@ -55,6 +55,12 @@
             this.SubTotalLabel = new System.Windows.Forms.Label();
             this.CostTextBox = new System.Windows.Forms.TextBox();
             this.CostLabel = new System.Windows.Forms.Label();
+            this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.StreamStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.MovieSelectedGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LargePictureBox)).BeginInit();
@@ -64,8 +70,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.fileToolStripMenuItem1,
+            this.helpToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(549, 24);
@@ -74,10 +80,6 @@
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.printToolStripMenuItem,
-            this.printPreviewToolStripMenuItem,
-            this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
@@ -99,6 +101,7 @@
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
             this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.printPreviewToolStripMenuItem.Text = "Strea&m";
+            //this.printPreviewToolStripMenuItem.Click += new System.EventHandler(this.printPreviewToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -117,9 +120,9 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            //this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // CancelButton
             // 
@@ -130,7 +133,7 @@
             this.CancelButton.TabIndex = 1;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            //this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // StreamButton
             // 
@@ -316,6 +319,55 @@
             this.CostLabel.TabIndex = 0;
             this.CostLabel.Text = "Cost";
             // 
+            // fileToolStripMenuItem1
+            // 
+            this.fileToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.printToolStripMenuItem1,
+            this.StreamStripMenuItem1,
+            this.exitToolStripMenuItem1});
+            this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
+            this.fileToolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem1.Text = "&File";
+            // 
+            // printToolStripMenuItem1
+            // 
+            this.printToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem1.Image")));
+            this.printToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
+            this.printToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.printToolStripMenuItem1.Text = "&Print";
+            this.printToolStripMenuItem1.Click += new System.EventHandler(this.printToolStripMenuItem1_Click);
+            // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem1.Text = "E&xit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
+            // 
+            // helpToolStripMenuItem1
+            // 
+            this.helpToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem1});
+            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem1.Text = "&Help";
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem1.Text = "&About...";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+            // 
+            // StreamStripMenuItem1
+            // 
+            this.StreamStripMenuItem1.Name = "StreamStripMenuItem1";
+            this.StreamStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.StreamStripMenuItem1.Text = "Stream";
+            this.StreamStripMenuItem1.Click += new System.EventHandler(this.StreamStripMenuItem1_Click);
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,5 +427,11 @@
         private System.Windows.Forms.TextBox CostTextBox;
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.CheckBox DVDCheckBox;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem StreamStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
     }
 }

@@ -1,4 +1,11 @@
-﻿using System;
+﻿// Appllication Name:   Movie Bonanza
+// Author's Name:       Yogeshkumar Patel
+// Student ID:          200334362
+// Date:                March 05, 2017
+// Description:         This application provide facility to user for make selection of favourite movie 
+//                      and also provide some extra features to add addinational things and at last
+//                      shows their selection
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +21,6 @@ namespace MovieBonanza
     {
         // Create a new stream form object
         private StreamForm myStreamForm = new StreamForm();
-        public SelectionForm selectionForm;
         private Form previousForm;
 
         public Form PreviousForm
@@ -32,6 +38,7 @@ namespace MovieBonanza
         // Create dictionary to fill the data from previous form(selection form)
         public Dictionary<string, Object> Movie
         {
+            // set value to all define textbox
             set
             {
                 TitleTextBox.Text = (String)value["Title"];
@@ -39,15 +46,18 @@ namespace MovieBonanza
                 CostTextBox.Text = (String)value["Cost"];
                 LargePictureBox.Image = (System.Drawing.Image)value["Picture"];
 
-                double holdValue = Convert.ToDouble(CostTextBox.Text.Substring(1));
+                // Create private variable hold value for cost
+                double _holdValue = Convert.ToDouble(CostTextBox.Text.Substring(1));
+                
+                // IF condition for checked checkbox checked or not
                 if (DVDCheckBox.Checked)
                 {
-                    holdValue += 10;
+                    _holdValue += 10;
                 }
 
-                SubTotalTextBox.Text = "$" + Convert.ToString(holdValue);
-                SalesTaxTextBox.Text = "$" + Convert.ToString(0.13 * holdValue);
-                GrandTotalTextBox.Text = "$" + Convert.ToString(1.13 * holdValue);
+                SubTotalTextBox.Text = "$" + Convert.ToString(_holdValue);
+                SalesTaxTextBox.Text = "$" + Convert.ToString(0.13 * _holdValue);
+                GrandTotalTextBox.Text = "$" + Convert.ToString(1.13 * _holdValue);
             }
         }
 
@@ -58,11 +68,14 @@ namespace MovieBonanza
         /// <param name="e"></param>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Your reciept:" + "\n" + "Movie Ordered: " + TitleTextBox.Text + 
-                "\n" + "Genre: " + CategoryTextBox.Text + "\n" + 
-                "Total Cost: " + SubTotalTextBox.Text);
+          
         }
 
+        /// <summary>
+        /// Handler for checked checkbox event 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DVDCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             double holdValue = Convert.ToDouble(CostTextBox.Text.Substring(1));
@@ -89,7 +102,9 @@ namespace MovieBonanza
         /// <param name="e"></param>
         private void StreamButton_Click(object sender, EventArgs e)
         {
+            // for hide current form
             this.Hide();
+            // Create a new directory to catch data for next form
             myStreamForm.Movie = new Dictionary<string, string>
             {
                 {"Title", TitleTextBox.Text},
@@ -106,9 +121,9 @@ namespace MovieBonanza
         /// <param name="e"></param>
         private void BackButton_Click(object sender, EventArgs e)
         {           
-            selectionForm.Show();
+            previousForm.Show();
             this.Hide();
-            selectionForm.
+            
         }
 
         /// <summary>
@@ -116,7 +131,7 @@ namespace MovieBonanza
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -126,10 +141,28 @@ namespace MovieBonanza
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AboutBox aboutBox = new AboutBox();
             aboutBox.Show();
         }
+
+        /// <summary>
+        /// Handler for 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void printToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your reciept:" + "\n" + "Movie Ordered: " + TitleTextBox.Text +
+              "\n" + "Genre: " + CategoryTextBox.Text + "\n" +
+              "Total Cost: " + SubTotalTextBox.Text);
+        }
+
+        private void StreamStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You selected movie stream sending to printer.!!");
+        }
+
     }
 }

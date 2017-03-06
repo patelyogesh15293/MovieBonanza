@@ -1,4 +1,11 @@
-﻿using System;
+﻿// Appllication Name:   Movie Bonanza
+// Author's Name:       Yogeshkumar Patel
+// Student ID:          200334362
+// Date:                March 05, 2017
+// Description:         This application provide facility to user for make selection of favourite movie 
+//                      and also provide some extra features to add addinational things and at last
+//                      shows their selection
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +19,8 @@ namespace MovieBonanza
 {
     public partial class SelectionForm : Form
     {
-        //create a new order form
-        OrderForm myOrderForm = new OrderForm();
+        ////create a new order form
+        //OrderForm myOrderForm = new OrderForm();
 
         // Reference to previous created form
         public Form previousForm;
@@ -64,14 +71,13 @@ namespace MovieBonanza
             {"New Releases", "4.99"}            
         };
 
-        //Create picture directory for store pictures of movie
-        
-
         private void CurrentMoviesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Object for catch user selected value
             ListBox listBox = (ListBox)sender;
             String movie = (String)listBox.SelectedItem;
 
+            // Assign all text fields 
             TitleTextBox.Text = movie;
             CategoryTextBox.Text = genres[movie];
             CostTextBox.Text = "$" + costs[genres[movie]];
@@ -83,6 +89,8 @@ namespace MovieBonanza
         /// </summary>
         public void getImages()
         {
+            //Conditions for checked textbox value and display picture 
+
             if (TitleTextBox.Text == "Cedar Rapids")
             {
                 SmallPictureBox.Image = Properties.Resources.CedarRapids;
@@ -194,7 +202,7 @@ namespace MovieBonanza
         /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            OrderForm myOrderForm = new OrderForm();
             myOrderForm.Movie = new Dictionary<String, object>
             {
                 {"Title", TitleTextBox.Text },
@@ -203,7 +211,10 @@ namespace MovieBonanza
                 {"Picture", SmallPictureBox.Image }
 
             };
-            myOrderForm.Show();           
+            myOrderForm.PreviousForm = this;
+
+            this.Hide();
+            myOrderForm.Show();
         }
 
     }
